@@ -1,0 +1,7 @@
+//Change these values and also the file name. Remove Sample
+{
+  "env": {
+    "MONGO_ATLAS_USER": "username",
+    "MONGO_ATLAS_PW": "password"
+  }
+}
