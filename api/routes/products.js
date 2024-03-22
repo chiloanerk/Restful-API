@@ -3,11 +3,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const multer = require('multer');
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
+    destination(req, file, cb) {
         cb(null, './uploads');
     },
-    filename: function (req, file, cb) {
-        cb(null, new Date().toISOString() + file.originalname)
+    filename(req, file, cb) {
+        cb(null, new Date().toISOString().slice(0, 19) + '-' + file.originalname)
     }
 });
 
@@ -23,7 +23,7 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
     storage: storage,
     limits: {
-        fileSize: 1024 * 1024 * 1
+        fileSize: 1024 * 1024 * 2
     },
     fileFilter: fileFilter
 });

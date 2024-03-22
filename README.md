@@ -15,6 +15,10 @@ This project provides an API for a shop.
 
 - **nodemon** (^3.1.0): Utility that monitors for changes in your source code and automatically restarts your server.
 
+## Regex expression
+
+- for verifying the email address, i used this post found here on [stack overflow](https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript)
+
 ---
 
 This is just an overview of the dependencies I used in this project. Feel free to google their uses.
